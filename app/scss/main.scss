@@ -1,0 +1,69 @@
+// Подключаем библиотеки *.css
+@import '../libs/bootstrap/bootstrap.min';
+@import '../libs/animate/animate';
+@import '../libs/normalize/normalize';
+@import '../libs/font-awesome-4.7.0/font-awesome.min';
+
+
+// Подключаем миксины
+@import '_mixins/_fontFace';
+
+
+// Подключаем шрифты
+@import '_fonts';
+
+
+// ОБЪЯВЛЯЕМ ПЕРЕМЕННЫЕ
+$defaultFont: "MyFont", sans-serif;
+
+
+/* =================================== */
+/*	Basic Style 
+/* =================================== */
+body {
+	line-height: 1.42;
+  font-size: 16px;
+  font-family: $defaultFont;
+  color: #000;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+  
+p {
+  margin: 0;
+}
+ 
+a {
+	text-decoration: none;
+  color: #000;
+}
+
+/* =================================== */
+/*	Общие стили 
+/* =================================== */
+
+@import '_common';
+
+/* =================================== */
+/*	Начало верстки 
+/* =================================== */
+
+// Подключаем стили секци header
+@import '_sections/_header';
+
+
+/* =================================== */
+/*	Конец верстки 
+/* =================================== */
+
+// Подключаем медиа запросы, всегда в конце
+@import '_media';
