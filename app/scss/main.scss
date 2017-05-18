@@ -1,17 +1,8 @@
-// Подключаем библиотеки *.css
-@import '../libs/bootstrap/bootstrap.min';
-@import '../libs/animate/animate';
-@import '../libs/normalize/normalize';
-@import '../libs/font-awesome-4.7.0/font-awesome.min';
-
-
-// Подключаем миксины
-@import '_mixins/_fontFace';
-
-
 // Подключаем шрифты
 @import '_fonts';
 
+// Подключаем библиотеки
+@import '_libs';
 
 // ОБЪЯВЛЯЕМ ПЕРЕМЕННЫЕ
 $defaultFont: "MyFont", sans-serif;
@@ -25,6 +16,10 @@ body {
   font-size: 16px;
   font-family: $defaultFont;
   color: #000;
+}
+
+section {
+  position: relative;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -45,6 +40,14 @@ p {
 a {
 	text-decoration: none;
   color: #000;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 /* =================================== */
@@ -60,6 +63,8 @@ a {
 // Подключаем стили секци header
 @import '_sections/_header';
 
+// Подключаем стили секци footer
+@import '_sections/_footer';
 
 /* =================================== */
 /*	Конец верстки 
