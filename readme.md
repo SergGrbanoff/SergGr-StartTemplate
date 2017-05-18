@@ -1,4 +1,4 @@
-<img src="img/banner-serggrbanoff.jpg" alt="banner-serggrbanoff">
+<img src="app/img/banner-serggrbanoff.jpg" alt="banner-serggrbanoff">
 
 <h1>SergGr - StartTemplate</h1>
 
