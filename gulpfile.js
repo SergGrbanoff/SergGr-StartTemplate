@@ -16,7 +16,7 @@ var gulp 						= require('gulp'),
 
 // Работа с Pug
 gulp.task('pug', function() {
-    return gulp.src('app/pug/pages/*.pug')
+    return gulp.src('app/pug/*.pug')
         .pipe(plumber())
         .pipe(pug({
             pretty: true
