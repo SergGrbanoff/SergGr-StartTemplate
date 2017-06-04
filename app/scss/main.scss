@@ -5,17 +5,47 @@
 @import '_libs';
 
 // ОБЪЯВЛЯЕМ ПЕРЕМЕННЫЕ
-$defaultFont: "MyFont", sans-serif;
+$defFont: "MyFont", sans-serif;
 
 
 /* =================================== */
 /*	Basic Style 
 /* =================================== */
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: rgba(0,0,0,.25);
+  border-color: rgba(0,0,0,.25);
+}
+
 body {
-	line-height: 1.42;
+  position: relative;
+  min-width: 320px;
+  line-height: 1.75;
   font-size: 16px;
-  font-family: $defaultFont;
+  font-family: $defFont;
   color: #000;
+  overflow-x: hidden;
+  opacity: 1;
 }
 
 section {
@@ -41,10 +71,7 @@ a {
 	text-decoration: none;
   color: #000;
   cursor: pointer;
-  &:hover,
-  &:active,
-  &:visited,
-  &:link {
+  &:hover {
     text-decoration: none;
     color: #000;
   }
@@ -54,7 +81,31 @@ a {
 /*	Общие стили 
 /* =================================== */
 
-@import '_common';
+.container {
+  width: 97%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 97%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
 
 /* =================================== */
 /*	Начало верстки 
